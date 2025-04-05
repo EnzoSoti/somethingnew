@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 50px;
+    width: 100%;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+nav h1 {
+    font-size: 1.8rem;
+    margin-right: 20px;
+}
+
+nav h1 span {
+    color: #ff6347;
+}
+
+nav h1 .fairview {
+    color: yellow;
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #fff, #f5f5f5);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.welcome-section h2 {
+    color: #ff6347;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    max-width: 800px;
+}
+
+/* Calculator section with side-by-side layout */
+.calculator-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.grade-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    flex: 1;
+    min-width: 0; /* Prevents flex items from overflowing */
+}
+
+.grade-container h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.grade-container h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #ff6347;
+}
+
+#grade-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#grade-form label {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+#grade-form input {
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+    width: 100%;
+}
+
+#grade-form input:focus {
+    border-color: #ff6347;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
+}
+
+#grade-form button {
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#grade-form button:hover {
+    background-color: #e05a40;
+}
+
+.result-container {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+.result-container h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.result-container p {
+    margin: 10px 0;
+}
+
+.result-container strong {
+    font-size: 1.2em;
+}
+
+/* Style based on grade */
+.excellent {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.very-good {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+}
+
+.satisfactory {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+}
+
+.fair {
+    background-color: #ffeeba;
+    border: 1px solid #ffdf7e;
+    color: #856404;
+}
+
+.failed {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* Grading System Display */
+.grading-system {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 0; /* Prevents flex items from overflowing */
+}
+
+.grading-system h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.grading-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Prevents table from overflowing */
+}
+
+.grading-table th, .grading-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.grading-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Improved Responsive Design */
+@media (max-width: 900px) {
+    .calculator-section {
+        flex-direction: column;
+    }
+    
+    .grade-container, .grading-system {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    nav h1 {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+    
+    .welcome-section {
+        padding: 30px 15px;
+    }
+    
+    .grade-container, .grading-system {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grade-container h2, .welcome-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    #grade-form input, #grade-form button {
+        padding: 10px;
+    }
+    
+    .result-container {
+        padding: 15px;
+    }
+    
+    .grading-table {
+        font-size: 0.85rem;
+    }
+    
+    .grading-table th, .grading-table td {
+        padding: 6px 4px;
+    }
+    
+    nav h1 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+    .grading-table {
+        font-size: 0.75rem;
+    }
+    
+    nav h1 {
+        font-size: 1.1rem;
+    }
+    
+    .grade-container, .grading-system {
+        padding: 15px;
+    }
+}

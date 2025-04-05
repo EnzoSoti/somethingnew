@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./grade.css">
+</head>
+<body>
+    <nav>
+        <h1>Grade <span>Calculator</span> For <span class="fairview">STI Fairview</span> Grading System</h1>
+        <span>Made by: Enzo.dev</span>
+    </nav>
+
+    <main>
+        <div class="welcome-section">
+            <h2>Welcome to the Grade Calculator!</h2>
+            <p>Calculate your grades easily and efficiently based on the STI Fairview grading system.</p>
+        </div>
+
+        <!-- Calculator section with side-by-side layout -->
+        <div class="calculator-section">
+            <div class="grade-container">
+                <h2>Calculate Your Grade</h2>
+                <form id="grade-form">
+                    <label for="prelims">Prelims:</label>
+                    <input type="number" id="prelims" name="prelims" placeholder="Enter your prelims score (20%)" min="0" max="100" required>
+
+                    <label for="midterms">Midterms:</label>
+                    <input type="number" id="midterms" name="midterms" placeholder="Enter your midterms score (20%)" min="0" max="100" required>
+
+                    <label for="prefinals">Pre Finals:</label>
+                    <input type="number" id="prefinals" name="prefinals" placeholder="Enter your pre-finals score (20%)" min="0" max="100" required>
+
+                    <label for="finals">Finals:</label>
+                    <input type="number" id="finals" name="finals" placeholder="Enter your finals score (40%)" min="0" max="100" required>
+
+                    <button type="submit">Calculate Your Grade</button>
+                </form>
+                <div id="result"></div>
+            </div>
+            
+            <div class="grading-system">
+                <h3>STI Fairview Grading System</h3>
+                <div class="table-container">
+                    <table class="grading-table">
+                        <thead>
+                            <tr>
+                                <th>Range</th>
+                                <th>GPA</th>
+                                <th>Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>97.50 - 100.00</td>
+                                <td>1.00</td>
+                                <td>Excellent</td>
+                            </tr>
+                            <tr>
+                                <td>94.50 - 97.49</td>
+                                <td>1.25</td>
+                                <td>Very Good</td>
+                            </tr>
+                            <tr>
+                                <td>91.50 - 94.49</td>
+                                <td>1.50</td>
+                                <td>Very Good</td>
+                            </tr>
+                            <tr>
+                                <td>88.50 - 91.49</td>
+                                <td>1.75</td>
+                                <td>Very Good</td>
+                            </tr>
+                            <tr>
+                                <td>85.50 - 88.49</td>
+                                <td>2.00</td>
+                                <td>Satisfactory</td>
+                            </tr>
+                            <tr>
+                                <td>81.50 - 85.49</td>
+                                <td>2.25</td>
+                                <td>Satisfactory</td>
+                            </tr>
+                            <tr>
+                                <td>77.50 - 81.49</td>
+                                <td>2.50</td>
+                                <td>Satisfactory</td>
+                            </tr>
+                            <tr>
+                                <td>73.50 - 77.49</td>
+                                <td>2.75</td>
+                                <td>Fair</td>
+                            </tr>
+                            <tr>
+                                <td>69.50 - 73.49</td>
+                                <td>3.00</td>
+                                <td>Fair</td>
+                            </tr>
+                            <tr>
+                                <td>Below 69.50</td>
+                                <td>5.00</td>
+                                <td>Failed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./script.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
