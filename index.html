@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grade Calculator</title>
+    <title>STI Fairview Grade Calculator</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./grade.css">
     <link rel="icon" href="./My Logo.png">
+    <link rel="stylesheet" href="./landing.css">
 </head>
 <body>
     <nav>
@@ -17,104 +17,59 @@
     </nav>
 
     <main>
-        <div class="welcome-section">
-            <h2>Welcome to the Grade Calculator!</h2>
-            <p>Calculate your grades easily and efficiently based on the STI Fairview grading system.</p>
-        </div>
-
-        <!-- Calculator section with side-by-side layout -->
-        <div class="calculator-section">
-            <div class="grade-container">
-                <h2>Calculate Your Grade</h2>
-                <form id="grade-form">
-                    <label for="prelims">Prelims:</label>
-                    <input type="number" id="prelims" name="prelims" placeholder="Enter your prelims score (20%)" min="0" max="100" required>
-
-                    <label for="midterms">Midterms:</label>
-                    <input type="number" id="midterms" name="midterms" placeholder="Enter your midterms score (20%)" min="0" max="100" required>
-
-                    <label for="prefinals">Pre Finals:</label>
-                    <input type="number" id="prefinals" name="prefinals" placeholder="Enter your pre-finals score (20%)" min="0" max="100" required>
-
-                    <label for="finals">Finals:</label>
-                    <input type="number" id="finals" name="finals" placeholder="Enter your finals score (40%)" min="0" max="100" required>
-
-                    <button type="submit">Calculate Your Grade</button>
-                </form>
-                <div id="result"></div>
-            </div>
-            
-            <div class="grading-system">
-                <h3>STI Fairview Grading System</h3>
-                <div class="table-container">
-                    <table class="grading-table">
-                        <thead>
-                            <tr>
-                                <th>Range</th>
-                                <th>GPA</th>
-                                <th>Remarks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>97.50 - 100.00</td>
-                                <td>1.00</td>
-                                <td>Excellent</td>
-                            </tr>
-                            <tr>
-                                <td>94.50 - 97.49</td>
-                                <td>1.25</td>
-                                <td>Very Good</td>
-                            </tr>
-                            <tr>
-                                <td>91.50 - 94.49</td>
-                                <td>1.50</td>
-                                <td>Very Good</td>
-                            </tr>
-                            <tr>
-                                <td>88.50 - 91.49</td>
-                                <td>1.75</td>
-                                <td>Very Good</td>
-                            </tr>
-                            <tr>
-                                <td>85.50 - 88.49</td>
-                                <td>2.00</td>
-                                <td>Satisfactory</td>
-                            </tr>
-                            <tr>
-                                <td>81.50 - 85.49</td>
-                                <td>2.25</td>
-                                <td>Satisfactory</td>
-                            </tr>
-                            <tr>
-                                <td>77.50 - 81.49</td>
-                                <td>2.50</td>
-                                <td>Satisfactory</td>
-                            </tr>
-                            <tr>
-                                <td>73.50 - 77.49</td>
-                                <td>2.75</td>
-                                <td>Fair</td>
-                            </tr>
-                            <tr>
-                                <td>69.50 - 73.49</td>
-                                <td>3.00</td>
-                                <td>Fair</td>
-                            </tr>
-                            <tr>
-                                <td>Below 69.50</td>
-                                <td>5.00</td>
-                                <td>Failed</td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Simplify Your <span>Grade Calculations</span> at <span class="fairview">STI Fairview</span></h1>
+                    <p class="hero-description">Get accurate GPA conversions and grade assessments based on the official STI Fairview grading system. Calculate your standing in just a few clicks!</p>
+                    <a href="calculator.html" class="cta-button">Start Calculating Now</a>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="card-container">
+                        <h2 class="card-title">Why Use Our Calculator?</h2>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">📊</div>
+                            <div class="feature-text">
+                                <h3>Accurate Calculations</h3>
+                                <p>Based on STI Fairview's official grading system</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">⚡</div>
+                            <div class="feature-text">
+                                <h3>Quick Results</h3>
+                                <p>Get your final grade, GPA, and remarks instantly</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">📱</div>
+                            <div class="feature-text">
+                                <h3>Mobile Friendly</h3>
+                                <p>Use on any device - desktop, tablet, or smartphone</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🎓</div>
+                            <div class="feature-text">
+                                <h3>STI Standards</h3>
+                                <p>Follows the exact STI Fairview grading scale</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
-    
+
+    <footer>
+        <p>&copy; 2025 STI Fairview Grade Calculator | Made by Enzo.dev</p>
+    </footer>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="./script.js"></script>
-    <script src="./script.js"></script>
 </body>
 </html>

@@ -79,7 +79,7 @@ nav h1 .fairview {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
     flex: 1;
-    min-width: 0; /* Prevents flex items from overflowing */
+    min-width: 0; 
 }
 
 .grade-container h2 {
@@ -205,7 +205,7 @@ nav h1 .fairview {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     flex: 1;
-    min-width: 0; /* Prevents flex items from overflowing */
+    min-width: 0; 
 }
 
 .grading-system h3 {
@@ -217,7 +217,7 @@ nav h1 .fairview {
 .grading-table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed; /* Prevents table from overflowing */
+    table-layout: fixed; 
 }
 
 .grading-table th, .grading-table td {
@@ -229,6 +229,22 @@ nav h1 .fairview {
 .grading-table th {
     background-color: #f2f2f2;
     font-weight: bold;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #555;
 }
 
 /* Improved Responsive Design */
