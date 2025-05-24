@@ -6,70 +6,167 @@
     <title>STI Fairview Grade Calculator</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="icon" href="./My Logo.png">
-    <link rel="stylesheet" href="./landing.css">
 </head>
-<body>
-    <nav>
-        <h1>Grade <span>Calculator</span> For <span class="fairview">STI Fairview</span> Grading System</h1>
-        <span>Made by: Enzo.dev</span>
+<body class="font-poppins bg-gradient-to-br from-blue-50 via-white to-purple-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg border-b-4 border-blue-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-800">
+                    Grade <span class="text-blue-600">Calculator</span> For 
+                    <span class="fairview text-purple-600 bg-purple-100 px-2 py-1 rounded-lg">STI Fairview</span> 
+                    Grading System
+                </h1>
+                <span class="text-sm md:text-base text-gray-600 font-medium">Made by: Enzo.dev</span>
+            </div>
+        </div>
     </nav>
 
-    <main>
-        <section class="hero-section">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Simplify Your <span>Grade Calculations</span> at <span class="fairview">STI Fairview</span></h1>
-                    <p class="hero-description">Get accurate GPA conversions and grade assessments based on the official STI Fairview grading system. Calculate your standing in just a few clicks!</p>
-                    <a href="calculator.html" class="cta-button">Start Calculating Now</a>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Hero Section -->
+        <section class="hero-section mb-16">
+            <div class="hero-container grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="hero-content space-y-8">
+                    <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
+                        Simplify Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Grade Calculations</span> at 
+                        <span class="fairview text-purple-600 bg-purple-100 px-3 py-1 rounded-lg inline-block mt-2">STI Fairview</span>
+                    </h1>
+                    <p class="hero-description text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
+                        Get accurate GPA conversions and grade assessments based on the official STI Fairview grading system. Calculate your standing in just a few clicks!
+                    </p>
+                    <a href="calculator.html" class="cta-button inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105">
+                        <span class="text-2xl mr-3">🧮</span>
+                        Start Calculating Now
+                        <span class="text-xl ml-2">→</span>
+                    </a>
                 </div>
                 
+                <!-- Hero Image/Features Card -->
                 <div class="hero-image">
-                    <div class="card-container">
-                        <h2 class="card-title">Why Use Our Calculator?</h2>
+                    <div class="card-container bg-white rounded-3xl shadow-2xl p-8 border border-gray-100 transform hover:scale-105 transition-all duration-300">
+                        <h2 class="card-title text-2xl font-bold text-center text-gray-800 mb-8 flex items-center justify-center">
+                            <span class="text-3xl mr-3 text-blue-500">✅</span>
+                            Why Use Our Calculator?
+                        </h2>
                         
-                        <div class="feature-item">
-                            <div class="feature-icon">📊</div>
-                            <div class="feature-text">
-                                <h3>Accurate Calculations</h3>
-                                <p>Based on STI Fairview's official grading system</p>
+                        <div class="space-y-6">
+                            <div class="feature-item flex items-start space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200">
+                                <div class="feature-icon flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg">
+                                    📊
+                                </div>
+                                <div class="feature-text">
+                                    <h3 class="font-semibold text-gray-800 text-lg mb-1">Accurate Calculations</h3>
+                                    <p class="text-gray-600">Based on STI Fairview's official grading system</p>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">⚡</div>
-                            <div class="feature-text">
-                                <h3>Quick Results</h3>
-                                <p>Get your final grade, GPA, and remarks instantly</p>
+                            
+                            <div class="feature-item flex items-start space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200">
+                                <div class="feature-icon flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg">
+                                    ⚡
+                                </div>
+                                <div class="feature-text">
+                                    <h3 class="font-semibold text-gray-800 text-lg mb-1">Quick Results</h3>
+                                    <p class="text-gray-600">Get your final grade, GPA, and remarks instantly</p>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">📱</div>
-                            <div class="feature-text">
-                                <h3>Mobile Friendly</h3>
-                                <p>Use on any device - desktop, tablet, or smartphone</p>
+                            
+                            <div class="feature-item flex items-start space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200">
+                                <div class="feature-icon flex-shrink-0 w-12 h-12 bg-gradient-to-r from-green-400 to-green-500 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg">
+                                    📱
+                                </div>
+                                <div class="feature-text">
+                                    <h3 class="font-semibold text-gray-800 text-lg mb-1">Mobile Friendly</h3>
+                                    <p class="text-gray-600">Use on any device - desktop, tablet, or smartphone</p>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">🎓</div>
-                            <div class="feature-text">
-                                <h3>STI Standards</h3>
-                                <p>Follows the exact STI Fairview grading scale</p>
+                            
+                            <div class="feature-item flex items-start space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200">
+                                <div class="feature-icon flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg">
+                                    🎓
+                                </div>
+                                <div class="feature-text">
+                                    <h3 class="font-semibold text-gray-800 text-lg mb-1">STI Standards</h3>
+                                    <p class="text-gray-600">Follows the exact STI Fairview grading scale</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Additional Features Section -->
+        <section class="py-16 bg-white rounded-3xl shadow-xl mb-16">
+            <div class="max-w-6xl mx-auto px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        Everything You Need for <span class="text-blue-500">Grade Tracking</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Our calculator is designed specifically for STI Fairview students, ensuring accuracy and compliance with your institution's standards.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 rounded-2xl border-2 border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl">
+                            🔢
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Weighted Calculation</h3>
+                        <p class="text-gray-600">Properly weights your Prelims (20%), Midterms (20%), Pre-Finals (20%), and Finals (40%)</p>
+                    </div>
+                    
+                    <div class="text-center p-6 rounded-2xl border-2 border-gray-100 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl">
+                            📈
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">GPA Conversion</h3>
+                        <p class="text-gray-600">Automatically converts your numerical grade to the corresponding GPA scale</p>
+                    </div>
+                    
+                    <div class="text-center p-6 rounded-2xl border-2 border-gray-100 hover:border-green-200 hover:shadow-lg transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl">
+                            🧮
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Real-Time Feedback</h3>
+                        <p class="text-gray-600">See your computed grades and remarks updated instantly as you input data</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center py-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Ready to know your standing?</h2>
+            <p class="text-lg text-gray-600 mb-6">Click below and let the calculator do the work for you.</p>
+            <a href="calculator.html" class="inline-block px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl text-lg font-semibold shadow-lg hover:scale-105 transform transition duration-300">
+                Go to Calculator
+            </a>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 STI Fairview Grade Calculator | Made by Enzo.dev</p>
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-16 py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
+            &copy; 2025 Enzo.dev — STI Fairview Grade Calculator. All rights reserved.
+        </div>
     </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Toastify & Custom Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

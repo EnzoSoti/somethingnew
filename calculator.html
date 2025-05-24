@@ -6,112 +6,219 @@
     <title>Grade Calculator</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./grade.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="icon" href="./My Logo.png">
 </head>
-<body>
-    <nav>
-        <h1>Grade <span>Calculator</span> For <span class="fairview">STI Fairview</span> Grading System</h1>
-        <span>Made by: Enzo.dev</span>
+<body class="font-poppins bg-gradient-to-br from-blue-50 via-white to-purple-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg border-b-4 border-blue-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-800">
+                    Grade <span class="text-blue-600">Calculator</span> For 
+                    <span class="fairview text-purple-600 bg-purple-100 px-2 py-1 rounded-lg">STI Fairview</span> 
+                    Grading System
+                </h1>
+                <span class="text-sm md:text-base text-gray-600 font-medium">Made by: Enzo.dev</span>
+            </div>
+        </div>
     </nav>
 
-    <main>
-        <div class="welcome-section">
-            <h2>Welcome to the Grade Calculator!</h2>
-            <p>Calculate your grades easily and efficiently based on the STI Fairview grading system.</p>
-            <a href="index.html" class="back-link">Back to Home</a>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Welcome Section -->
+        <div class="text-center mb-12 bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    Welcome to the <span class="text-blue-600">Grade Calculator</span>!
+                </h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Calculate your grades easily and efficiently based on the STI Fairview grading system.
+                </p>
+                <a href="index.html" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Back to Home
+                </a>
+            </div>
         </div>
 
-        <!-- Calculator section with side-by-side layout -->
-        <div class="calculator-section">
-            <div class="grade-container">
-                <h2>Calculate Your Grade</h2>
-                <form id="grade-form">
-                    <label for="prelims">Prelims:</label>
-                    <input type="number" id="prelims" step="any" name="prelims" placeholder="Enter your prelims score (20%)" min="0" max="100" required>
+        <!-- Calculator Section -->
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Grade Calculator Form -->
+            <div class="grade-container bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8 flex items-center justify-center">
+                    <svg class="w-8 h-8 mr-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                    Calculate Your Grade
+                </h2>
+                
+                <form id="grade-form" class="space-y-6">
+                    <div class="space-y-2">
+                        <label for="prelims" class="block text-sm font-semibold text-gray-700">Prelims (20%)</label>
+                        <input type="number" id="prelims" step="any" name="prelims" 
+                               placeholder="Enter your prelims score" min="0" max="100" required
+                               class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 text-gray-700">
+                    </div>
 
-                    <label for="midterms">Midterms:</label>
-                    <input type="number" id="midterms" step="any" name="midterms" placeholder="Enter your midterms score (20%)" min="0" max="100" required>
+                    <div class="space-y-2">
+                        <label for="midterms" class="block text-sm font-semibold text-gray-700">Midterms (20%)</label>
+                        <input type="number" id="midterms" step="any" name="midterms" 
+                               placeholder="Enter your midterms score" min="0" max="100" required
+                               class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 text-gray-700">
+                    </div>
 
-                    <label for="prefinals">Pre Finals:</label>
-                    <input type="number" id="prefinals" step="any" name="prefinals" placeholder="Enter your pre-finals score (20%)" min="0" max="100" required>
+                    <div class="space-y-2">
+                        <label for="prefinals" class="block text-sm font-semibold text-gray-700">Pre Finals (20%)</label>
+                        <input type="number" id="prefinals" step="any" name="prefinals" 
+                               placeholder="Enter your pre-finals score" min="0" max="100" required
+                               class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 text-gray-700">
+                    </div>
 
-                    <label for="finals">Finals:</label>
-                    <input type="number" id="finals" step="any" name="finals" placeholder="Enter your finals score (40%)" min="0" max="100" required>
+                    <div class="space-y-2">
+                        <label for="finals" class="block text-sm font-semibold text-gray-700">Finals (40%)</label>
+                        <input type="number" id="finals" step="any" name="finals" 
+                               placeholder="Enter your finals score" min="0" max="100" required
+                               class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 text-gray-700">
+                    </div>
 
-                    <button type="submit">Calculate Your Grade</button>
+                    <button type="submit" 
+                            class="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                        Calculate Your Grade
+                    </button>
                 </form>
-                <div id="result"></div>
+                
+                <div id="result" class="mt-8"></div>
             </div>
             
-            <div class="grading-system">
-                <h3>STI Fairview Grading System</h3>
-                <div class="table-container">
-                    <table class="grading-table">
+            <!-- Grading System Table -->
+            <div class="grading-system bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6 flex items-center justify-center">
+                    <svg class="w-7 h-7 mr-3 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                    STI Fairview Grading System
+                </h3>
+                
+                <div class="table-container overflow-x-auto">
+                    <table class="grading-table w-full border-collapse">
                         <thead>
-                            <tr>
-                                <th>Range</th>
-                                <th>GPA</th>
-                                <th>Remarks</th>
+                            <tr class="bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+                                <th class="px-4 py-3 text-left font-semibold border border-gray-300">Range</th>
+                                <th class="px-4 py-3 text-left font-semibold border border-gray-300">GPA</th>
+                                <th class="px-4 py-3 text-left font-semibold border border-gray-300">Remarks</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>97.50 - 100.00</td>
-                                <td>1.00</td>
-                                <td>Excellent</td>
+                        <tbody class="text-sm">
+                            <tr class="hover:bg-green-50 transition-colors duration-200">
+                                <td class="px-4 py-3 border border-gray-300 font-medium">97.50 - 100.00</td>
+                                <td class="px-4 py-3 border border-gray-300 font-bold text-green-600">1.00</td>
+                                <td class="px-4 py-3 border border-gray-300">
+                                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        Excellent
+                                    </span>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>94.50 - 97.49</td>
-                                <td>1.25</td>
-                                <td>Very Good</td>
+                            <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                <td class="px-4 py-3 border border-gray-300 font-medium">94.50 - 97.49</td>
+                                <td class="px-4 py-3 border border-gray-300 font-bold text-blue-600">1.25</td>
+                                <td class="px-4 py-3 border border-gray-300">
+                                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                        Very Good
+                                    </span>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>91.50 - 94.49</td>
-                                <td>1.50</td>
-                                <td>Very Good</td>
+                            <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                <td class="px-4 py-3 border border-gray-300 font-medium">91.50 - 94.49</td>
+                                <td class="px-4 py-3 border border-gray-300 font-bold text-blue-600">1.50</td>
+                                <td class="px-4 py-3 border border-gray-300">
+                                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                        Very Good
+                                    </span>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>88.50 - 91.49</td>
-                                <td>1.75</td>
-                                <td>Very Good</td>
+                            <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                <td class="px-4 py-3 border border-gray-300 font-medium">88.50 - 91.49</td>
+                                <td class="px-4 py-3 border border-gray-300 font-bold text-blue-600">1.75</td>
+                                <td class="px-4 py-3 border border-gray-300">
+                                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                        Very Good
+                                    </span>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>85.50 - 88.49</td>
-                                <td>2.00</td>
-                                <td>Satisfactory</td>
+                            <tr class="hover:bg-yellow-50 transition-colors duration-200">
+                                <td class="px-4 py-3 border border-gray-300 font-medium">85.50 - 88.49</td>
+                                <td class="px-4 py-3 border border-gray-300 font-bold text-yellow-600">2.00</td>
+                                <td class="px-4 py-3 border border-gray-300">
+                                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                        Satisfactory
+                                    </span>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>81.50 - 85.49</td>
-                                <td>2.25</td>
-                                <td>Satisfactory</td>
+                            <tr class="hover:bg-yellow-50 transition-colors duration-200">
+                                <td class="px-4 py-3 border border-gray-300 font-medium">81.50 - 85.49</td>
+                                <td class="px-4 py-3 border border-gray-300 font-bold text-yellow-600">2.25</td>
+                                <td class="px-4 py-3 border border-gray-300">
+                                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                        Satisfactory
+                                    </span>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>77.50 - 81.49</td>
-                                <td>2.50</td>
-                                <td>Satisfactory</td>
+                            <tr class="hover:bg-yellow-50 transition-colors duration-200">
+                                <td class="px-4 py-3 border border-gray-300 font-medium">77.50 - 81.49</td>
+                                <td class="px-4 py-3 border border-gray-300 font-bold text-yellow-600">2.50</td>
+                                <td class="px-4 py-3 border border-gray-300">
+                                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                        Satisfactory
+                                    </span>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>73.50 - 77.49</td>
-                                <td>2.75</td>
-                                <td>Fair</td>
+                            <tr class="hover:bg-orange-50 transition-colors duration-200">
+                                <td class="px-4 py-3 border border-gray-300 font-medium">73.50 - 77.49</td>
+                                <td class="px-4 py-3 border border-gray-300 font-bold text-orange-600">2.75</td>
+                                <td class="px-4 py-3 border border-gray-300">
+                                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
+                                        Fair
+                                    </span>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>69.50 - 73.49</td>
-                                <td>3.00</td>
-                                <td>Fair</td>
+                            <tr class="hover:bg-orange-50 transition-colors duration-200">
+                                <td class="px-4 py-3 border border-gray-300 font-medium">69.50 - 73.49</td>
+                                <td class="px-4 py-3 border border-gray-300 font-bold text-orange-600">3.00</td>
+                                <td class="px-4 py-3 border border-gray-300">
+                                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
+                                        Fair
+                                    </span>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>Below 69.50</td>
-                                <td>5.00</td>
-                                <td>Failed</td>
+                            <tr class="hover:bg-red-50 transition-colors duration-200">
+                                <td class="px-4 py-3 border border-gray-300 font-medium">Below 69.50</td>
+                                <td class="px-4 py-3 border border-gray-300 font-bold text-red-600">5.00</td>
+                                <td class="px-4 py-3 border border-gray-300">
+                                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                                        Failed
+                                    </span>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            
         </div>
     </main>
     

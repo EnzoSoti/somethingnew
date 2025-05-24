@@ -94,21 +94,27 @@ document.addEventListener('DOMContentLoaded', function() {
         
     });
     
-    // kulay based sa grade
+    // Updated color scheme to match HTML's blue-purple theme
     function getToastBackgroundColor(grade) {
         switch(grade) {
             case 'Excellent':
-                return "linear-gradient(to right, #00b09b, #96c93d)";
+                // Deep blue to purple gradient (matching the main theme)
+                return "linear-gradient(to right, #3b82f6, #8b5cf6)";
             case 'Very Good':
-                return "linear-gradient(to right, #56ab2f, #a8e063)";
+                // Blue to lighter purple gradient
+                return "linear-gradient(to right, #2563eb, #7c3aed)";
             case 'Satisfactory':
-                return "linear-gradient(to right, #2193b0, #6dd5ed)";
+                // Blue gradient (matching the primary blue in HTML)
+                return "linear-gradient(to right, #1d4ed8, #3b82f6)";
             case 'Fair':
-                return "linear-gradient(to right, #f46b45, #eea849)";
+                // Purple to orange gradient (using the purple from HTML)
+                return "linear-gradient(to right, #7c3aed, #f59e0b)";
             case 'Failed':
-                return "linear-gradient(to right, #cb2d3e, #ef473a)";
+                // Red gradient but with purple undertones to match theme
+                return "linear-gradient(to right, #dc2626, #b91c1c)";
             default:
-                return "linear-gradient(to right, #8e9eab, #eef2f3)";
+                // Gray gradient matching the neutral tones in HTML
+                return "linear-gradient(to right, #6b7280, #9ca3af)";
         }
     }
 });
