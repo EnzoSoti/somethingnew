@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Calculator</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -18,6 +17,21 @@
             }
         }
     </script>
+    <style>
+    .modal {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .modal.hidden {
+        display: none;
+    }
+    .modal:not(.hidden) {
+        display: flex;
+    }
+    .modal-content {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+</style>
     <link rel="icon" href="./My Logo.png">
 </head>
 <body class="font-poppins bg-yellow-50 min-h-screen">
@@ -222,7 +236,7 @@
         </div>
     </main>
     
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
     <script src="./script.js"></script>
 </body>
 </html>
